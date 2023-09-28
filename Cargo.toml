@@ -4,10 +4,6 @@ version = "0.1.0"
 edition = "2021"
 authors = ["Nicolas 'flaith' Djurovic <flaithotw@gmail.com>"]
 
-[dependencies]
-clap = { version = "4.4.4", features = ["derive"] }
-log = "0.4.20"
-
 [[bin]]
 name = "sendHL7"
 path = "src/sendHL7.rs"
