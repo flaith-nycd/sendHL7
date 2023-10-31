@@ -5,5 +5,5 @@ edition = "2021"
 authors = ["Nicolas 'flaith' Djurovic <flaithotw@gmail.com>"]
 
 [[bin]]
-name = "sendHL7"
-path = "src/sendHL7.rs"
+name = "send_hl7"
+path = "src/send_hl7.rs"
