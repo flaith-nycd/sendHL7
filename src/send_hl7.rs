@@ -34,10 +34,6 @@ pub struct MshSegmentHeader {
     message_profile_identifier: String,
 }
 
-// const START_BLOCK: u8 = '\u{0b}' as u8;
-// const END_DATA: u8 = '\u{0d}' as u8;
-// const END_BLOCK: u8 = '\u{1c}' as u8;
-
 // sob = chr(11)   # MLLP Start of Block Character
 // eod = chr(28)   # MLLP End of Data Character
 // eob = chr(13)   # MLLP End of Block Character
@@ -89,8 +85,6 @@ fn read_file(path: &str) -> String {
         String::from_utf8(vec_buffer)
             // .map(|msg| format!("{}", msg))
             .unwrap();
-
-    // print!("{}", buffer);
 
     buffer
 }
@@ -187,9 +181,6 @@ fn main() -> io::Result<()> {
                 // If it's ok send the all buffer at onece, no need to send each line because, sometimes
                 // there is an issue with the sending in the stream, no CR is added
                 stream.write(buffer.as_bytes())?;
-
-                // No need to add
-                // stream.write(&[END_DATA_CHAR_CR])?;
 
                 // Finished sending the file
                 stream.write(&[END_BLOCK_CHAR])?;
