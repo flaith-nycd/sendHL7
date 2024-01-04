@@ -4,6 +4,10 @@ version = "0.1.0"
 edition = "2021"
 authors = ["Nicolas 'flaith' Djurovic <flaithotw@gmail.com>"]
 
+[dependencies]
+serde = {  version = "1.0.188", features = ["derive"] }
+serde_json = "1.0.107"
+
 [[bin]]
 name = "send_hl7"
 path = "src/send_hl7.rs"
