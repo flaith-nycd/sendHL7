@@ -178,7 +178,7 @@ fn main() -> io::Result<()> {
                     exit(-3)
                 }
 
-                // If it's ok send the all buffer at onece, no need to send each line because, sometimes
+                // If it's ok send the all buffer at once, no need to send each line because, sometimes
                 // there is an issue with the sending in the stream, no CR is added
                 stream.write(buffer.as_bytes())?;
 
